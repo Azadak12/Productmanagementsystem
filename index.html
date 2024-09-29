@@ -27,12 +27,40 @@
                     <th>Status</th>
                     <th>Description</th>
                     <th>Comments</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="productTable">
                 <!-- JavaScript will populate rows here -->
             </tbody>
         </table>
+
+        <!-- Edit Form Modal -->
+        <div id="editForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Product</h2>
+                <form id="productEditForm">
+                    <label for="editTitle">Title:</label>
+                    <input type="text" id="editTitle" required>
+
+                    <label for="editStatus">Status:</label>
+                    <select id="editStatus" required>
+                        <option value="accepted">Accepted</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="pending">Pending</option>
+                    </select>
+
+                    <label for="editDescription">Description:</label>
+                    <textarea id="editDescription" required></textarea>
+
+                    <label for="editComments">Comments:</label>
+                    <textarea id="editComments" required></textarea>
+
+                    <button type="submit">Update Product</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
